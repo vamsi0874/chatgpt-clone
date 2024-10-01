@@ -169,12 +169,17 @@ const app = express();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 console.log(__filename)
+
 app.use(
   cors({
-    origin: true,
+     origin: 'http://localhost:5173',
     credentials: true,
   })
 );
+
+
+
+
 
 app.use(express.json());
 
